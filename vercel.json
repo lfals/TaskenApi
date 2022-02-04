@@ -1,16 +1,10 @@
-{
-    "version": 2,
-    "name": "tasken-api",
+{ 
+    "version": 2, 
+    "name": "tasken-api", 
     "builds": [
-        {
-            "src": "dist/main.js",
-            "use": "@vercel/node"
-        }
-    ],
+      { "src": "dist/src/main.js", "use": "@vercel/node" }
+     ],
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "dist/main.js"
-        }
-    ]
-}
+      { "src": "/(.*)", "dest": "dist/src/main.js" }
+     ]
+  }
