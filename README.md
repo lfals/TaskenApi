@@ -26,35 +26,6 @@
 
 API development for product management
 
-# Routes
+# Documentation
 
-## System
-
-### [GET] /
-
-    Return the aplication status
-
-```json
-{
-  "status": "ok",
-  "info": {
-    "Database": {
-      "status": "up"
-    }
-  },
-  "error": {},
-  "details": {
-    "Database": {
-      "status": "up"
-    }
-  }
-}
-```
-
----
-
-## Products
-
-### [GET] /products
-
-### 200
+API Routes documentation on [Postman](https://documenter.getpostman.com/view/18631197/UVeGpQTp).
