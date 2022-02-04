@@ -37,3 +37,4 @@ lerna-debug.log*
 # Sensitive Files
 
 ormconfig.ts
+.env

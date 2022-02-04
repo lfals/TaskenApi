@@ -20,29 +20,9 @@ export class ProductsController {
     return this.productsService.createProduct(body);
   }
 
-  @Post('sell/:id')
-  async sellProduct(@Param() id: Iparam, @Body() body: Ibody) {
-    return this.productsService.sellProduct(id, body);
-  }
-
   @Get()
   async getAllProducts() {
     return this.productsService.getAllProducts();
-  }
-
-  @Get('id/:id')
-  async getProduct(@Param() param: ProductsEntity) {
-    return this.productsService.getProduct(param.id);
-  }
-
-  @Patch('id/:id')
-  async updateProduct(@Param() id: Iparam, @Body() body: ProductsEntity) {
-    return this.productsService.updateProduct(id, body);
-  }
-
-  @Delete('id/:id')
-  async deleteProduct(@Param() id: Iparam) {
-    return this.productsService.deleteProduct(id);
   }
 
   @Get('total')
@@ -63,5 +43,25 @@ export class ProductsController {
   @Get('stock/low')
   async getProductsWithoutStock() {
     return this.productsService.getProductsWithoutStock();
+  }
+
+  @Get('id/:id')
+  async getProduct(@Param() param: ProductsEntity) {
+    return this.productsService.getProduct(param.id);
+  }
+
+  @Patch('id/:id')
+  async updateProduct(@Param() id: Iparam, @Body() body: ProductsEntity) {
+    return this.productsService.updateProduct(id, body);
+  }
+
+  @Delete('id/:id')
+  async deleteProduct(@Param() id: Iparam) {
+    return this.productsService.deleteProduct(id);
+  }
+
+  @Post('sell/:id')
+  async sellProduct(@Param() id: Iparam, @Body() body: Ibody) {
+    return this.productsService.sellProduct(id, body);
   }
 }
